@@ -1,0 +1,20 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navbar-button {
+    min-width: 10vw;
+    max-width: 10vw;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: wheat;
+}
