@@ -1,10 +1,10 @@
 import React from 'react';
-import '../Css/ResultCard.css';
+import '../Css/ListCard.css';
 
-export const ResultCard = ({ anime }) => {
+export const ListCard = ({anime, type}) => {
     return (
-        <article className="result-card">
-            <header className="result-card-header">
+        <article className="list-card">
+            <header className="list-card-header">
                 <img alt={anime.title}
                     src={anime.image_url}
                 />
@@ -13,4 +13,3 @@ export const ResultCard = ({ anime }) => {
         </article>
     )
 }
-

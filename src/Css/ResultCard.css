@@ -1,18 +1,20 @@
-
 body {
     padding: 0;
     margin: 0;
-    color: white;
+    color: #C3A995;
     font-family: 'Roboto', sans-serif;
     
 }
 
 .result-card-list {
     display: flex;
-    padding: 1rem;
+    padding: 1rem ;
     overflow-x: scroll;
+    overflow-y: hidden;
     justify-content: center;
     flex-wrap: nowrap;
+    margin-right: 0;
+    
     
 }
 
@@ -28,8 +30,8 @@ body {
     margin: 0;
 
     transition: .2s;
-    border-radius: 16px;
-    border-color: wheat;
+    border-radius: 14px;
+    background-color: wheat;
     
     
 }
@@ -49,12 +51,12 @@ img {
     
 }
 
-h4 {
+h5 {
     height: 20px;
     max-width: 160px;
     text-align: center;
     align-self: center;
-    margin: .2rem 0 0 0;
+    margin: .2rem 0 .2rem 0;
     
     
 }
@@ -66,9 +68,9 @@ h4 {
 }
 
 .result-card:hover~.result-card{
-    transform: translateX(100px);
+    transform: translateX(80px);
 }
 
 .result-card:not(:first-child){
-    margin-left: -100px;
+    margin-left: -80px;
 }

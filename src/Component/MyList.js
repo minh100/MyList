@@ -1,7 +1,7 @@
-import React from 'react';
-import '../Css/ResultCard.css';
+import React, { useContext } from 'react';
 
-export const ResultCard = ({ anime }) => {
+export const MyList = () => {
+    
     return (
         <article className="result-card">
             <header className="result-card-header">
@@ -13,4 +13,3 @@ export const ResultCard = ({ anime }) => {
         </article>
     )
 }
-

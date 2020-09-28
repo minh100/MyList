@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import ResultCard from './Component/ResultCard.js';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { Navbar } from './Component/Navbar.js';
 import {Home} from './Home.js';

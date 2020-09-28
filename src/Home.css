@@ -1,18 +1,43 @@
-
-.top h3 {
-    text-align: center;
-    margin: 0;
+body {
+    background-color: #292F36;
 }
 
-.search h3{
-    text-align: center;
+.top h3 {
+    text-align: left;
+    margin: 2rem 0 1rem 1rem;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    color:black;
+    min-width: 300px;
+    border-radius: 40px;
+    padding-left: 1rem;
+    margin: 2rem;
+    max-height: 20px;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-section h3{
+    text-align: left;
+    margin: 2rem 0 1.5rem 1rem;
 }
 
 .result-card-list {
     display: flex;
     padding: 1rem;
     overflow-x: scroll;
-    justify-content: center;
+    justify-content: stretch;
     flex-wrap: nowrap;
+    padding: 0;
+    margin: 0 1rem 0 1rem;
     
 }

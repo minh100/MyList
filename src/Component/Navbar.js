@@ -4,7 +4,7 @@ import '../Css/Navbar.css';
 
 export const Navbar = () => {
     return (
-        <header>
+        <header className="navbar-section">
             <ul className="navbar">
                 <div className="navbar-button">
                     <Link className="link" to="/">ML</Link>
