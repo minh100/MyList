@@ -43,7 +43,6 @@ export const Home = () => {
                 })
             })
             .then(res => {
-                console.log(res.data);
                 setResults(res.data.results);
             })
     }
