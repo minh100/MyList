@@ -1,0 +1,24 @@
+.list-header {
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-header .title {
+    margin: 0;
+}
+
+.list-header .count {
+    padding-top: 3px;
+    
+    
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    
+}

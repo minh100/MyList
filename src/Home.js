@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { ResultCard } from './Component/ResultCard.js';
 import './Home.css';
 
@@ -9,34 +10,41 @@ export const Home = () => {
     const [results, setResults] = useState([]);
     const baseUrl = "https://api.jikan.moe/v3";
 
+    const dummy = "";
+
+    let cancel;
+    const CancelToken = axios.CancelToken;
+
     useEffect(() => {
-        fetch(`${baseUrl}/top/anime`)
-            .then(res => res.json())
-            .then((data) => {
-                if (!data.errors) {
+        cancel && cancel();
+        axios.get(`${baseUrl}/top/anime`,
+        {
+            cancelToken: new CancelToken(function executor(c) {
+                cancel = c
+            })
+        })
+            .then(res => {
+                setTopAnime(res.data.top);
+            })
+    }, [dummy])
 
-                    setTopAnime(data.top);
-                }
-
-            });
-    })
-
-    const onChange = (e) => {
+    const onChange = e => {
         e.preventDefault();
 
         setSearch(e.target.value);
 
         const query = e.target.value;
+        cancel && cancel();
 
-        fetch(`${baseUrl}/search/anime?q=${query}&page=1`)
-            .then(res => res.json())
-            .then((data) => {
-                if (!data.errors) {
-                    setResults(data.results);
-                }
-                else {
-                    setResults([]);
-                }
+        axios.get(`${baseUrl}/search/anime?q=${query}&page=1`,
+            {
+                cancelToken: new CancelToken(function executor(c) {
+                    cancel = c
+                })
+            })
+            .then(res => {
+                console.log(res.data);
+                setResults(res.data.results);
             })
     }
 
@@ -53,17 +61,16 @@ export const Home = () => {
                     />
                 </div>
 
-
                 {
-                    <section className="result-card-list">
-                        {results.map((shows) => (
-                            <ResultCard key={shows.mal_id} anime={shows} />
-                        ))}
-                    </section>
+                    results.length > 0 ? (
+                        <section className="result-card-list">
+                            {results.map((shows) => (
+                                <ResultCard key={shows.mal_id} anime={shows} />
+                            ))}
+                        </section>
+                    ) : ""
                 }
             </div>
-
-
 
             <div className="top">
                 <h3>ALL TIME TOP</h3>

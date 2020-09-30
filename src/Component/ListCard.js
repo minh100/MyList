@@ -1,15 +1,19 @@
 import React from 'react';
 import '../Css/ListCard.css';
+import { Controls } from '../Global/Controls.js';
 
-export const ListCard = ({anime, type}) => {
+export const ListCard = ({ anime, type }) => {
     return (
-        <article className="list-card">
-            <header className="list-card-header">
+        <div className="list-card">
+            <div className="image">
                 <img alt={anime.title}
                     src={anime.image_url}
                 />
+            </div>
+            <div className="bottom-info">
                 <h5>{anime.title}</h5>
-            </header>
-        </article>
+                <Controls type={type} anime={anime} />
+            </div>
+        </div>
     )
 }
