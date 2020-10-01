@@ -13,7 +13,8 @@ body {
 
 .search-bar input {
     color:black;
-    min-width: 300px;
+    min-width: 230px;
+    max-width: 230px;
     border-radius: 40px;
     padding-left: 1rem;
     margin: 2rem;
@@ -35,9 +36,10 @@ body {
     display: flex;
     padding: 1rem;
     overflow-x: scroll;
-    justify-content: start;
-    flex-wrap: nowrap;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    flex-wrap: start;
     padding: 0;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
     
 }

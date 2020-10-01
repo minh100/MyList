@@ -38,6 +38,10 @@ img {
     
 }
 
+img:hover {
+    cursor: pointer;
+}
+
 h5 {
     height: 20px;
     max-width: 160px;

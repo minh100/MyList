@@ -9,17 +9,17 @@ export default function AppReducer(state, action) {
             return {
                 ...state,
                 activeAnimeList: state.activeAnimeList.filter(  // returns those that are not the anime to be removed
-                    anime => anime.mal_id !== action.payload    // essentailly leaves them behind and take that anime out
+                    anime => anime.id !== action.payload    // essentailly leaves them behind and take that anime out
                 ),
                 finishedAnimeList: state.finishedAnimeList.filter(
-                    anime => anime.mal_id !== action.payload
+                    anime => anime.id !== action.payload
                 ),
             };
         case "MOVE_ANIME_TO_ACTIVE":     // moves anime from finished to active
             return {
                 ...state,
                 finishedAnimeList: state.finishedAnimeList.filter(  // returns those that are not the anime to be removed
-                    anime => anime.mal_id !== action.payload.mal_id // essentailly leaves them behind and take that anime out
+                    anime => anime.id !== action.payload.id // essentailly leaves them behind and take that anime out
                 ),
                 activeAnimeList: [action.payload, ...state.activeAnimeList], // adds the anime back to the active list
             };
@@ -27,7 +27,7 @@ export default function AppReducer(state, action) {
             return {
                 ...state,
                 activeAnimeList: state.activeAnimeList.filter(      // returns those that are not the anime to be removed
-                    anime => anime.mal_id !== action.payload.mal_id // essentailly leaves them behind and take that anime out
+                    anime => anime.id !== action.payload.id // essentailly leaves them behind and take that anime out
                 ),
                 finishedAnimeList: [action.payload, ...state.finishedAnimeList],    // adds the anime to finish
             };

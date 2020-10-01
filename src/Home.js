@@ -8,27 +8,29 @@ export const Home = () => {
     const [topAnime, setTopAnime] = useState([]);
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
-    const baseUrl = "https://api.jikan.moe/v3";
+    const baseUrl = "https://kitsu.io/api/edge";
 
     const dummy = "";
 
-    let cancel;
-    const CancelToken = axios.CancelToken;
-
     useEffect(() => {
+        let cancel;
+        
         cancel && cancel();
-        axios.get(`${baseUrl}/top/anime`,
+        axios.get(`${baseUrl}/anime?sort=popularityRank`,
         {
-            cancelToken: new CancelToken(function executor(c) {
+            cancelToken: new axios.CancelToken(function executor(c) {
                 cancel = c
             })
         })
             .then(res => {
-                setTopAnime(res.data.top);
+                // console.log(res.data.data)
+                setTopAnime(res.data.data);
             })
     }, [dummy])
 
     const onChange = e => {
+        let cancel;
+        
         e.preventDefault();
 
         setSearch(e.target.value);
@@ -36,14 +38,15 @@ export const Home = () => {
         const query = e.target.value;
         cancel && cancel();
 
-        axios.get(`${baseUrl}/search/anime?q=${query}&page=1`,
+        axios.get(`${baseUrl}/anime?filter[text]=${query}`,
             {
-                cancelToken: new CancelToken(function executor(c) {
+                cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
                 })
             })
             .then(res => {
-                setResults(res.data.results);
+                
+                setResults(res.data.data);
             })
     }
 
@@ -64,7 +67,7 @@ export const Home = () => {
                     results.length > 0 ? (
                         <section className="result-card-list">
                             {results.map((shows) => (
-                                <ResultCard key={shows.mal_id} anime={shows} />
+                                <ResultCard key={shows.id} anime={shows} />
                             ))}
                         </section>
                     ) : ""
@@ -76,7 +79,7 @@ export const Home = () => {
                 {
                     <section className="result-card-list">
                         {topAnime.map((shows) => (
-                            <ResultCard key={shows.mal_id} anime={shows} />
+                            <ResultCard key={shows.id} anime={shows} />
                         ))}
                     </section>
 

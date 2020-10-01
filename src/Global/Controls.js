@@ -12,7 +12,7 @@ export const Controls = ({ anime, type }) => {
                         Move to Watched
                     </button>
 
-                    <button onClick={() => removeAnimeBothList(anime.mal_id)}>
+                    <button onClick={() => removeAnimeBothList(anime.id)}>
                         Remove from list
                     </button>
 
@@ -24,7 +24,7 @@ export const Controls = ({ anime, type }) => {
                         Move to Watching
                     </button>
 
-                    <button onClick={() => removeAnimeBothList(anime.mal_id)}>
+                    <button onClick={() => removeAnimeBothList(anime.id)}>
                         Remove from list
                     </button>
                 </>
