@@ -24,6 +24,7 @@ export const ListCard = ({ anime, type }) => {
                     </div>
                 ) : (
                         <div className="popup-container">
+                            <div className="blocker" onClick={() => togglePopup(false)}></div>
                             <div className="popup-content">
                                 <div id="popup-cover" style={{ backgroundImage: `url(${anime.attributes.posterImage.large})` }}>
                                 </div>
@@ -36,9 +37,9 @@ export const ListCard = ({ anime, type }) => {
                                         <div className="popup-stats">
                                             <h5 id="popup-score">Rating: {anime.attributes.averageRating}</h5>
                                             <h5 id="popup-episodes">Episodes: {anime.attributes.episodeCount}</h5>
-                                            <a id="link-to-MAL" href={anime.url}>MAL</a>
+                                            <a id="link-to-MAL" href={`https://www.youtube.com/watch?v=${anime.attributes.youtubeVideoId}`} target="_blank">Trailer</a>
                                         </div>
-                                        <h4 id="popup-synopsis">{anime.links.self}</h4>
+                                        <h4 id="popup-synopsis">{anime.attributes.synopsis}</h4>
 
                                     </div>
                                 </div>

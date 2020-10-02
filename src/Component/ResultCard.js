@@ -8,8 +8,8 @@ export const ResultCard = ({ anime }) => {
     const { addAnimeToActive, removeAnimeBothList, activeAnimeList, finishedAnimeList } = useContext(GlobalContext);
     const [popup, togglePopup] = useState(false);
 
-    let storedActiveAnime = activeAnimeList.find(o => o.mal_id === anime.mal_id);
-    let storedFinishedAnime = finishedAnimeList.find(o => o.mal_id === anime.mal_id);
+    let storedActiveAnime = activeAnimeList.find(o => o.id === anime.id);
+    let storedFinishedAnime = finishedAnimeList.find(o => o.id === anime.id);
 
 
     // prevents you from adding already added anime
@@ -35,22 +35,24 @@ export const ResultCard = ({ anime }) => {
                         </header>
                     </article >
                 ) : (
-                        <div className="popup-container">
+                    // feature
+                        <div className="popup-container" >
+                            <div className="blocker" onClick={() => togglePopup(false)}></div>
                             <div className="popup-content">
                                 <div id="popup-cover" style={{ backgroundImage: `url(${anime.attributes.posterImage.large})` }}>
                                 </div>
                                 <div className="popup-description">
                                     <div className="popup-header">
-                                        <h1 id="popup-open-title">{anime.attributes.posterImage.large}</h1>
+                                        <h1 id="popup-open-title">{anime.attributes.canonicalTitle}</h1>
                                         <button id="popup-open-toggle" onClick={() => togglePopup(false)}>X</button>
                                     </div>
                                     <div className="popup-info">
                                         <div className="popup-stats">
                                             <h5 id="popup-score">Rating: {anime.attributes.averageRating}</h5>
                                             <h5 id="popup-episodes">Episodes: {anime.attributes.episodeCount}</h5>
-                                            <a id="link-to-MAL" href={anime.url}>MAL</a>
+                                            <a id="link-to-MAL" href={`https://www.youtube.com/watch?v=${anime.attributes.youtubeVideoId}`} target="_blank">Trailer</a>
                                         </div>
-                                        <h4 id="popup-synopsis">{anime.links.self}</h4>
+                                        <h4 id="popup-synopsis">{anime.attributes.synopsis}</h4>
 
                                     </div>
                                 </div>
