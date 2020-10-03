@@ -73,9 +73,9 @@ h5 {
 }
 
 .result-card:hover~.result-card{
-    transform: translateX(80px);
+    transform: translateX(20px);
 }
 
 .result-card:not(:first-child){
-    margin-left: -80px;
+    margin-left: -20px;
 }

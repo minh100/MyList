@@ -39,12 +39,13 @@
 }
 
 .popup-content .banner {
-    background-position: 50% 45%;
+    background-position: 80% 45%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 210px;
     width: 100%;
     margin-top: -18px;
+    
 }
 
 .popup-content .banner .shadow {
@@ -79,6 +80,7 @@
     margin-top: 20px;
     margin-left: 10px;
     width: 100%;
+    cursor: none;
 }
 
 .popup-description-section {
@@ -104,14 +106,10 @@
     margin-right: 2rem;
 }
 
-.controls {
-    margin-left: 10px;
-}
-
 .popup-stats {
-    margin-left: 7px;
+    margin: 15px 0 0 7px;
     justify-content: space-evenly;
-    min-height: 90px;
+    min-height: 90px;    
 }
 
 #link-to-MAL:link ,#link-to-MAL:visited {
@@ -121,7 +119,101 @@
     
 }
 
-@media screen and (min-width: 761px){
+.popup-close-button {
+    width: 100%;
+    text-align: center;
+    background-color: indianred;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    padding: 2px;
+    
+}
+
+.popup-close-button-container {
+    width: 50px;
+    margin: 0;
+    color: white;
+    position: absolute;
+    left: 88%;
+    top: 30px;
+}
+
+.popup-close-button:hover {
+    cursor: pointer;
+}
+
+.popup-control-dropdown-content {
+    display: none;
+    background-color: wheat;
+    color: #C3A995;
+    position: absolute;
+    top: 175px;
+    left: 10px;
+    height: 105px;
+    margin: 0;
+    max-width: 70%;
+    min-width: 70%;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(49,54,68,.05), 0 5px 20px rgba(49,54,68,.08);
+    z-index: 10;
+    
+}
+
+.popup-control-button {
+    margin-top: 6px;
+    background-color: #74A6CF;
+    width: 100%;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.popup-control-container {
+    font-size: 1.2em;
+    width: 150px;
+    color: white;
+    margin-left: 10px;
+    
+    
+}
+
+.popup-control-container:hover {
+    cursor: pointer;
+}
+
+.popup-control-container:hover .popup-control-dropdown-content {
+    display: block;
+}
+
+.popup-control-dropdown-content:hover {
+    display: block;
+}
+
+.popup-item, .popup-item-active {
+
+    align-items: center;
+    font-size: 14px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 20px 50px;
+    line-height: 0;
+    padding: 6px 18px;
+    width: 76%;
+    border-radius: 4px;
+
+}
+
+.popup-item-active {
+    background-color: lightgreen;
+}
+
+.popup-item:hover {
+    background-color: lightgray;
+    
+}
+
+@media screen and (min-width: 409px){
     .popup-content .popup-header .popup-header-section {
         padding-left: 30px;
         padding-right: 30px;
@@ -130,9 +222,31 @@
 }
 
 @media screen and (max-width: 760px) { 
+    .popup-close-button-container {
+        left: 80%;
+        top: 30px;
+    }
+
+    .popup-control-dropdown-content {
+        left: 220px;
+        top: 142px;
+        max-width: 140px;
+        min-width: 140px;
+    }
+
+    .popup-item-active {
+        width: 104px;
+    }
+
+    .popup-control-button {
+        top: 100px;
+        width: 130px;
+    }
+
     .popup-content .banner {
         height: 210px;
         margin-top: 0;
+        width: 100%;
     }
     .popup-content {
         width: 100%;
@@ -156,7 +270,7 @@
     .popup-poster-wrap-inner {
         display: grid;
         grid-template-columns: 200px auto;
-        grid-gap: 30px;
+        grid-gap: 16px;
         align-items: flex-end;
         
     }
@@ -165,14 +279,10 @@
         display: grid;
         grid-template-columns: 60px 60px 60px;
         grid-gap: 50px;
-        margin-left: 6.5rem;
+        margin: 1rem 0 0 6.5rem;
         font-size: 1.2rem;
+        line-height: 1rem;
     }
 
-    .controls {
-        margin: 0;
-        padding: 0;
-        width: 125px;
-    }
 
 }

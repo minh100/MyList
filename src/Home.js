@@ -63,7 +63,7 @@ export const Home = () => {
         const query = e.target.value;
         cancel && cancel();
 
-        axios.get(`${baseUrl}/anime?filter[text]=${query}`,
+        axios.get(`${baseUrl}/anime?filter[text]=${query}&page[limit]=7`,
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
