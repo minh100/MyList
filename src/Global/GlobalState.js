@@ -9,6 +9,8 @@ const initialState = {
         JSON.parse(localStorage.getItem('activeAnimeList')) : [],
     finishedAnimeList: localStorage.getItem('finishedAnimeList') ?
         JSON.parse(localStorage.getItem('finishedAnimeList')) : [],
+    planningAnimeList: localStorage.getItem('planningAnimeList') ?
+        JSON.parse(localStorage.getItem('planningAnimeList')) : [],
 };
 
 
@@ -22,24 +24,24 @@ export const GlobalProvider = props => {
     useEffect(() => {
         localStorage.setItem('activeAnimeList', JSON.stringify(state.activeAnimeList));
         localStorage.setItem('finishedAnimeList', JSON.stringify(state.finishedAnimeList));
+        localStorage.setItem('planningAnimeList', JSON.stringify(state.planningAnimeList));
     }, [state])
 
     //actions
-    // adds anime to watch list
-    const addAnimeToActive = anime => {
-        dispatch({ type: "ADD_ANIME_TO_ACTIVE", payload: anime });
-    };
     // removes anime from both active and finished list
     const removeAnimeBothList = (id) => {
         dispatch({ type: "REMOVE_ANIME_BOTH_LIST", payload: id });
     }
-    // moves anime to active from finished
+    // moves anime to active
     const moveAnimeToActive = anime => {
         dispatch({ type: "MOVE_ANIME_TO_ACTIVE", payload: anime});
     }
-    // move anime from finished to active
+    // move anime to finished
     const moveAnimeToFinish = anime => {
         dispatch({ type: "MOVE_ANIME_TO_FINISH", payload: anime});
+    }
+    const moveAnimeToPlanning = anime => {
+        dispatch({ type: "MOVE_ANIME_TO_PLANNING", payload: anime});
     }
 
     return (
@@ -47,10 +49,11 @@ export const GlobalProvider = props => {
             value={{
                 activeAnimeList: state.activeAnimeList,
                 finishedAnimeList: state.finishedAnimeList,
-                addAnimeToActive,
+                planningAnimeList: state.planningAnimeList,
                 removeAnimeBothList,
                 moveAnimeToActive,
                 moveAnimeToFinish,
+                moveAnimeToPlanning,
             }}>
             {props.children}
         </GlobalContext.Provider>
