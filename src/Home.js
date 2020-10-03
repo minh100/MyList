@@ -6,6 +6,8 @@ import './Home.css';
 export const Home = () => {
 
     const [topAnime, setTopAnime] = useState([]);
+    const [seasonPopular, setSeasonPopular] = useState([]);
+    const [upcoming, setUpcoming] = useState([]);
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
     const baseUrl = "https://kitsu.io/api/edge";
@@ -14,23 +16,46 @@ export const Home = () => {
 
     useEffect(() => {
         let cancel;
-        
+
         cancel && cancel();
-        axios.get(`${baseUrl}/anime?sort=popularityRank`,
-        {
-            cancelToken: new axios.CancelToken(function executor(c) {
-                cancel = c
+        axios.get(`${baseUrl}/anime?sort=popularityRank`,   // gets all time popular
+            {
+                cancelToken: new axios.CancelToken(function executor(c) {
+                    cancel = c
+                })
             })
-        })
             .then(res => {
                 // console.log(res.data.data)
                 setTopAnime(res.data.data);
             })
+
+        axios.get(`${baseUrl}/anime?filter[status]=current&sort=popularityRank`,    // gets trending now
+            {
+                cancelToken: new axios.CancelToken(function executor(c) {
+                    cancel = c
+                })
+            })
+            .then(res => {
+                // console.log(res.data.data)
+                setSeasonPopular(res.data.data);
+            })
+
+        axios.get(`${baseUrl}/anime?filter[status]=upcoming&sort=popularityRank`,    // gets upcoming
+            {
+                cancelToken: new axios.CancelToken(function executor(c) {
+                    cancel = c
+                })
+            })
+            .then(res => {
+                // console.log(res.data.data)
+                setUpcoming(res.data.data);
+            })
+
     }, [dummy])
 
     const onChange = e => {
         let cancel;
-        
+
         e.preventDefault();
 
         setSearch(e.target.value);
@@ -45,7 +70,7 @@ export const Home = () => {
                 })
             })
             .then(res => {
-                
+
                 setResults(res.data.data);
             })
     }
@@ -54,7 +79,7 @@ export const Home = () => {
         <div>
             <div className="search-section">
                 <div className="search-bar">
-                    <h3>SEARCH</h3>
+                    <h3>Search</h3>
                     <input
                         type="text"
                         onChange={onChange}
@@ -73,9 +98,30 @@ export const Home = () => {
                     ) : ""
                 }
             </div>
+            <div className="upcoming">
+                <h3>Upcoming</h3>
+                {
+                    <section className="result-card-list">
+                        {upcoming.map((shows) => (
+                            <ResultCard key={shows.id} anime={shows} />
+                        ))}
+                    </section>
 
+                }
+            </div>
+            <div className="trending">
+                <h3>Trending Now</h3>
+                {
+                    <section className="result-card-list">
+                        {seasonPopular.map((shows) => (
+                            <ResultCard key={shows.id} anime={shows} />
+                        ))}
+                    </section>
+
+                }
+            </div>
             <div className="top">
-                <h3>ALL TIME TOP</h3>
+                <h3>All Time Top</h3>
                 {
                     <section className="result-card-list">
                         {topAnime.map((shows) => (
@@ -85,6 +131,8 @@ export const Home = () => {
 
                 }
             </div>
+
+
         </div>
     )
 

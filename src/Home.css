@@ -2,7 +2,7 @@ body {
     background-color: #292F36;
 }
 
-.top h3 {
+.top h3, .upcoming h3, .trending h3 {
     text-align: left;
     margin: 2rem 0 1rem 1rem;
 }
