@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import '../Css/Popup.css';
 import '../Css/Controls.css';
+import '../Css/ListCard.css';
 import { GlobalContext } from '../Global/GlobalState.js';
 
 export const ListCard = ({ anime }) => {
@@ -22,46 +23,43 @@ export const ListCard = ({ anime }) => {
             {
                 (popup === false) ? (
 
-                    <article key={anime.id} className="result-card" >
-                        <header className="result-card-header">
-                            <img onClick={() => togglePopup(true)} alt={anime.attributes.canonicalTitle}
-                                src={anime.attributes.posterImage.large}
-                            />
-                            <div className="result-card-bot">
-                                <h5>{anime.attributes.canonicalTitle}</h5>
-                                <div className="control-container">
-                                    <div className="control-button">
-                                        {
-                                            activeListDisabled ? <i className="fas fa-glasses"></i> :
-                                                finishedListDisabled ? <i className="fas fa-check"></i> :
-                                                    planningListDisabled ? <i className="fas fa-bookmark"></i> :
-                                                        <i className="fas fa-plus-circle"></i>
-                                        }
-
-                                    </div>
-                                    <div>
-                                        {
-                                            <div className="control-dropdown-content">
-                                                <div onClick={() => moveAnimeToActive(anime)} className={activeListDisabled ? "item-active" : "item"}>
-                                                    <i className="fas fa-glasses"></i> Watching
-                                                    </div>
-                                                <div onClick={() => moveAnimeToFinish(anime)} className={finishedListDisabled ? "item-active" : "item"}>
-                                                    <i className="fas fa-check"></i> Watched
-                                                    </div>
-                                                <div onClick={() => moveAnimeToPlanning(anime)} className={planningListDisabled ? "item-active" : "item"}>
-                                                    <i className="fas fa-bookmark"></i> Planning
-                                                    </div>
-                                                <div onClick={() => removeAnimeBothList(anime.id)} className="item">
-                                                    <i className="fas fa-times"></i> Reset
-                                                    </div>
+                    <div className="list-card">
+                        <div className="card-cover">
+                            <div className="control-container">
+                                <div className="control-button">
+                                    {
+                                        activeListDisabled ? <i className="fas fa-glasses"></i> :
+                                            finishedListDisabled ? <i className="fas fa-check"></i> :
+                                                planningListDisabled ? <i className="fas fa-bookmark"></i> :
+                                                    <i className="fas fa-plus"></i>
+                                    }
+                                </div>
+                                <div className="control-dropdown-content">
+                                    {
+                                        <>
+                                            <div onClick={() => moveAnimeToActive(anime)} className={activeListDisabled ? "item-active" : "item"}>
+                                                <i className="fas fa-glasses"></i> Watching
                                             </div>
-                                        }
-
-                                    </div>
+                                            <div onClick={() => moveAnimeToFinish(anime)} className={finishedListDisabled ? "item-active" : "item"}>
+                                                <i className="fas fa-check"></i> Watched
+                                            </div>
+                                            <div onClick={() => moveAnimeToPlanning(anime)} className={planningListDisabled ? "item-active" : "item"}>
+                                                <i className="fas fa-bookmark"></i> Planning
+                                            </div>
+                                            <div onClick={() => removeAnimeBothList(anime.id)} className="item">
+                                                <i className="fas fa-times"></i> Reset
+                                            </div>
+                                        </>
+                                    }
                                 </div>
                             </div>
-                        </header>
-                    </article >
+                            <img className="card-cover-image" onClick={() => togglePopup(true)} alt={anime.attributes.canonicalTitle} src={anime.attributes.posterImage.large}></img>
+
+                        </div>
+                        <div className="card-bottom">
+                            <div className="card-title">{anime.attributes.canonicalTitle}</div>
+                        </div>
+                    </div>
                 ) : (
                         // clickable cards
                         <div className="popup-container" >
