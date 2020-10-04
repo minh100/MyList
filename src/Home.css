@@ -1,10 +1,15 @@
 body {
     background-color: #292F36;
+    
 }
 
 .top h3, .upcoming h3, .trending h3 {
     text-align: left;
     margin: 2rem 0 1rem 1rem;
+}
+
+.search-section {
+    margin-top: 100px;
 }
 
 .search-bar {
@@ -21,6 +26,7 @@ body {
     max-height: 20px;
     text-decoration: none;
     -webkit-appearance: none;
+    
 }
 
 .search-bar input:focus {
@@ -35,10 +41,11 @@ body {
 .result-card-list {
     position: relative;
     display: grid;
-    grid-gap: 28px 30px;
+    grid-gap: 28px 20px;
     grid-template-columns: repeat(auto-fill, 185px);
     justify-content: space-between;
     margin: 1rem;
+    
 }
 
 @media screen and (max-width: 760px) {
@@ -46,6 +53,8 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
         grid-gap: 25px 20px;
     }
+
+    
 }
 
 @media screen and (max-width: 1040px) {
@@ -57,9 +66,10 @@ body {
     }
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1280px) {
     .result-card-list {
         grid-gap: 25px 14px;
+        
     }
 }
 
