@@ -7,7 +7,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 1;
+    z-index: 1000;
     overflow: auto;
     
 }
@@ -79,7 +79,7 @@
     box-shadow: 0 0 29px rgba(49,54,68,0.25);
     margin-top: 20px;
     margin-left: 10px;
-    width: 100%;
+    width: 90%;
     cursor: none;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .popup-stats {
-    margin: 15px 0 0 7px;
+    margin: 15px 0 0 11px;
     justify-content: space-evenly;
     min-height: 90px;    
 }
@@ -147,7 +147,7 @@
     background-color: wheat;
     color: #C3A995;
     position: absolute;
-    top: 175px;
+    top: 225px;
     left: 10px;
     height: 105px;
     margin: 0;
@@ -229,7 +229,7 @@
 
     .popup-control-dropdown-content {
         left: 220px;
-        top: 142px;
+        top: 175px;
         max-width: 140px;
         min-width: 140px;
     }

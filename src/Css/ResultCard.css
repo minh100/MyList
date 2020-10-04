@@ -1,81 +1,83 @@
-body {
-    padding: 0;
-    margin: 0;
-    color: #C3A995;
-    font-family: 'Roboto', sans-serif;
-    
-}
-
 .result-card {
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content auto;
     position: relative;
-    height: 317px;
-    width: 150px;
-    min-width: 200px;
-    max-width: 200px;
-    padding: 0.25rem;
-    align-items: center;
-    margin: 1rem 0 0 0;
-
-    transition: .2s;
-    border-radius: 14px;
-    background-color: wheat;
-    
-}
-
-.result-card-list::-webkit-scrollbar {
-    display: none;
-} 
-
-img {
-    height: 250px;
     width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-    
-    padding-bottom: 0;
-    border-radius: 16px;
-    
+    transition: transform .1s ease-in-out;
 }
-
-img:hover {
-    cursor: pointer;
-}
-
-h5 {
-    height: 20px;
-    max-width: 160px;
-    min-width: 160px;
-    text-align: left;
-    margin: .2rem 0 .2rem 0.2rem;
-}
-
-.result-card-bot {
-    display: flex;
-    
-}
-
-.result-card button {
-    border-radius: 50%;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    float: right;
-}
-
-.result-card button:hover {
-    cursor: pointer;
-}
-
 
 .result-card:hover {
-    transform: translateY(-1rem);
+    transform: scale(1.1);
+    color: gold;
+    transition: color .2s ease-in-out;
+}
+
+.card-cover {
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(salmon,.15),0 4px 4px rgba(salmon,.05);
+    cursor: pointer;
+    display: inline-block;
+    height: 265px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+:after, :before {
+    box-sizing: border-box;
+}
+
+.card-cover-image {
+    height: 100%;
+    left: -20px;
+    object-fit: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
     
 }
 
-.result-card:hover~.result-card{
-    transform: translateX(20px);
+img {
+    border-style: none;
+    vertical-align: text-top;
 }
 
-.result-card:not(:first-child){
-    margin-left: -20px;
+.card-title {
+    
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+@media screen and (max-width: 1040px) {
+    .result-card {
+        width: 160px;
+    }
+
+    .card-cover {
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .card-cover:before {
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        padding-bottom: 142.85714%;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .card-title {
+        font-size: 1rem;
+        
+    }
 }
