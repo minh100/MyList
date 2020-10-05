@@ -14,7 +14,6 @@ export const Navbar = () => {
                     <Link className="link" to="/">Search</Link>
                     <Link className="link" to="/mylist">MyList</Link>
                 </div>
-
             </div>
         </div>
     )

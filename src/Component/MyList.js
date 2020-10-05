@@ -10,30 +10,45 @@ export const MyList = () => {
 
     return (
         <div className="mylist-section">
-
             {
                 listing === "Watching" && (
                     <>
                         <div className="list-header">
-                            <div>
-                                <h3 className="title">{listing}</h3>
-                                <button onClick={() => setListing("Watched")} >Go to Watched</button>
-                                <button onClick={() => setListing("Planning")} >Go to Planning</button>
+                            <div className="list-info">
+                                <div className="title">
+                                    <h3>{listing}</h3>
+                                </div>
+                                <div className="dropdown">
+                                    <i className="fas fa-angle-right fa-lg"></i>
+                                    <div className="dropdown-content">
+                                        <div onClick={() => setListing("Watched")} className="items">Go to Watched</div>
+                                        <div onClick={() => setListing("Planning")} className="items">Go to Planning</div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <h5 className="count">{activeAnimeList.length > 0 ? `Anime watching: ${activeAnimeList.length}` : ""}</h5>
+                            <div className="count-box">
+                                Anime watching: <h5 className="count">{activeAnimeList.length}</h5>
+                            </div>
                         </div>
                         <section className="list-section">
                             {activeAnimeList.length > 0 ? (
                                 <>
-                                {
-                                    activeAnimeList.map((anime) => (
-                                        <ListCard key={anime.id} anime={anime}  />
-                                    ))
-                                }
+                                    {
+                                        activeAnimeList.map((anime) => (
+                                            <ListCard key={anime.id} anime={anime} />
+                                        ))
+                                    }
                                 </>
 
-                            ) : <h4>No Anime Added. Go Add some.</h4>}
+                            ) : (
+                                    <>
+                                        <i style={{ textAlign: "right" }} className="fas fa-ghost fa-3x"></i>
+                                        <div className="filler">
+                                            No Anime Watching. Go Add Some.
+                                    </div>
+                                    </>
+                                )
+                            }
                         </section>
                     </>
                 )
@@ -42,24 +57,40 @@ export const MyList = () => {
                 listing === "Watched" && (
                     <>
                         <div className="list-header">
-                            <div>
-                                <h3 className="title">{listing}</h3>
-                                <button onClick={() => setListing("Watching")} >Go to Watching</button>
-                                <button onClick={() => setListing("Planning")} >Go to Planning</button>
+                            <div className="list-info">
+                                <div className="title">
+                                    <h3>{listing}</h3>
+                                </div>
+                                <div className="dropdown">
+                                    <i className="fas fa-angle-right fa-lg"></i>
+                                    <div className="dropdown-content">
+                                        <div onClick={() => setListing("Watching")} className="items">Go to Watching</div>
+                                        <div onClick={() => setListing("Planning")} className="items">Go to Planning</div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <h5 className="count">{finishedAnimeList.length > 0 ? `Anime Watched: ${finishedAnimeList.length}` : ""}</h5>
+                            <div className="count-box">
+                                Anime Watched: <h5 className="count">{finishedAnimeList.length}</h5>
+                            </div>
                         </div>
                         <section className="list-section">
                             {finishedAnimeList.length > 0 ? (
                                 <>
                                     {
                                         finishedAnimeList.map((anime) => (
-                                            <ListCard key={anime.id} anime={anime}  />
+                                            <ListCard key={anime.id} anime={anime} />
                                         ))
                                     }
                                 </>
-                            ) : <h4>No Anime Watched. Go Watch Some.</h4>}
+                            ) : (
+                                    <>
+                                        <i style={{ textAlign: "right" }} className="fas fa-ghost fa-3x"></i>
+                                        <div className="filler">
+                                            No Anime Watched. Go Watch Some.
+                                    </div>
+                                    </>
+                                )
+                            }
                         </section>
                     </>
                 )
@@ -68,25 +99,41 @@ export const MyList = () => {
                 listing === "Planning" && (
                     <>
                         <div className="list-header">
-                            <div>
-                                <h3 className="title">{listing}</h3>
-                                <button onClick={() => setListing("Watching")} >Go to Watching</button>
-                                <button onClick={() => setListing("Watched")} >Go to Watched</button>
+                            <div className="list-info">
+                                <div className="title">
+                                    <h3>{listing}</h3>
+                                </div>
+                                <div className="dropdown">
+                                    <i className="fas fa-angle-right fa-lg"></i>
+                                    <div className="dropdown-content">
+                                        <div onClick={() => setListing("Watching")} className="items">Go to Watching</div>
+                                        <div onClick={() => setListing("Watched")} className="items">Go to Watched</div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <h5 className="count">{planningAnimeList.length > 0 ? `Anime watching: ${planningAnimeList.length}` : ""}</h5>
+                            <div className="count-box">
+                                Planned Anime: <h5 className="count">{planningAnimeList.length}</h5>
+                            </div>
                         </div>
                         <section className="list-section">
                             {planningAnimeList.length > 0 ? (
                                 <>
-                                {
-                                    planningAnimeList.map((anime) => (
-                                        <ListCard key={anime.id} anime={anime} />
-                                    ))
-                                }
+                                    {
+                                        planningAnimeList.map((anime) => (
+                                            <ListCard key={anime.id} anime={anime} />
+                                        ))
+                                    }
                                 </>
 
-                            ) : <h4>No Anime Planned. Go Add some.</h4>}
+                            ) : (
+                                    <>
+                                        <i style={{ textAlign: "right" }} className="fas fa-ghost fa-3x"></i>
+                                        <div className="filler">
+                                            No Anime Planned. Go Add Some.
+                                        </div>
+                                    </>
+                                )
+                            }
                         </section>
                     </>
                 )

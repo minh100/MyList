@@ -47,8 +47,9 @@
     text-decoration: none;
     transition: .15s;
     outline: 0;
-    color: #C3A995
+    color: #C3A995;
 }
+
 
 @media screen and (max-height: 920px) {
     .navbar-section {

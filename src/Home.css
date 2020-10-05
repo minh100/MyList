@@ -75,6 +75,6 @@ body {
 
 @media screen and (max-width: 1540px) {
     .result-card-list {
-        grid-gap: 25px 20px;
+        grid-gap: 25px 23.9px;
     }
 }
