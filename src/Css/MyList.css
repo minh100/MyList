@@ -13,7 +13,8 @@
 
 .list-info {
     display: flex;
-    width: 210px;
+    width: 160px;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -87,6 +88,9 @@
     .list-section {
         grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
         grid-gap: 25px 20px;
+    }
+    .list-header {
+        display: flex;
     }
 }
 
