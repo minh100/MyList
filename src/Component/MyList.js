@@ -16,7 +16,7 @@ export const MyList = () => {
                         <div className="list-header">
                             <div className="list-info">
                                 <div className="title">
-                                    <h3>{listing}</h3>
+                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>
@@ -45,7 +45,7 @@ export const MyList = () => {
                                         <i style={{ textAlign: "right" }} className="fas fa-ghost fa-3x"></i>
                                         <div className="filler">
                                             No Anime Watching. Go Add Some.
-                                    </div>
+                                        </div>
                                     </>
                                 )
                             }
@@ -59,7 +59,7 @@ export const MyList = () => {
                         <div className="list-header">
                             <div className="list-info">
                                 <div className="title">
-                                    <h3>{listing}</h3>
+                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>
@@ -101,7 +101,7 @@ export const MyList = () => {
                         <div className="list-header">
                             <div className="list-info">
                                 <div className="title">
-                                    <h3>{listing}</h3>
+                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>

@@ -1,0 +1,94 @@
+.container {
+    margin-top: 100px;
+}
+
+.viewmore-header {
+    text-align: left;
+    margin: 1rem 2rem 0 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    
+}
+
+.viewmore-footer {
+    text-align: left;
+    margin: 1rem 2rem 4rem 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.page-count {
+    margin-left: 2rem;
+    width: 100px;
+}
+
+.pagination {
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    float: right;
+}
+
+.previous, .next {
+    padding: 6px;
+    
+}
+
+.previous:hover, .next:hover {
+    color: rgb(240, 227, 203);
+    transition: color .2s ease-in-out;
+}
+
+.viewmore-card-section{
+    position: relative;
+    display: grid;
+    grid-gap: 28px 15px;
+    grid-template-columns: repeat(auto-fill, 185px);
+    justify-content: space-between;
+    margin: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+    .viewmore-card-section {
+        grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+        grid-gap: 25px 20px;
+        margin: 1rem;
+    }
+
+    .card-bottom {
+        width: 145px;
+    }
+}
+
+
+@media screen and (max-width: 1040px) and (min-width: 800px){
+    .viewmore-card-section {
+        padding: 0 20px;
+        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+        grid-gap: 25px 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1050px) {
+    .viewmore-card-section {
+        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+        grid-gap: 25px 20px;
+        
+    }
+
+    .header {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 1540px) and (min-width: 1300px) {
+    .viewmore-card-section {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        grid-gap: 25px 20px;
+    }
+}

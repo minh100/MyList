@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ResultCard } from './Component/ResultCard.js';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -63,7 +64,7 @@ export const Home = () => {
         const query = e.target.value;
         cancel && cancel();
 
-        axios.get(`${baseUrl}/anime?filter[text]=${query}&page[limit]=12`,
+        axios.get(`${baseUrl}/anime?filter[text]=${query}&page[limit]=20`,
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
@@ -79,7 +80,7 @@ export const Home = () => {
         <div>
             <div className="search-section">
                 <div className="search-bar">
-                    <h3>Search</h3>
+                    <h3 className="title">Search</h3>
                     <input
                         type="text"
                         onChange={onChange}
@@ -99,7 +100,12 @@ export const Home = () => {
                 }
             </div>
             <div className="upcoming">
-                <h3>Upcoming</h3>
+                <div className="header">
+                    <h3 className="title">Upcoming</h3>
+                    <div className="viewmore">
+                        <Link to="/upcoming">View More</Link>
+                    </div>
+                </div>
                 {
                     <section className="result-card-list">
                         {upcoming.map((shows) => (
@@ -110,7 +116,12 @@ export const Home = () => {
                 }
             </div>
             <div className="trending">
-                <h3>Trending Now</h3>
+                <div className="header">
+                    <h3 className="title">Trending Now</h3>
+                    <div className="viewmore">
+                        <Link to="/trending now">View More</Link>
+                    </div>
+                </div>
                 {
                     <section className="result-card-list">
                         {seasonPopular.map((shows) => (
@@ -121,7 +132,12 @@ export const Home = () => {
                 }
             </div>
             <div className="top">
-                <h3>All Time Top</h3>
+                <div className="header">
+                    <h3 className="title">All Time Top</h3>
+                    <div className="viewmore">
+                        <Link to="/all time top">View More</Link>
+                    </div>
+                </div>
                 {
                     <section className="result-card-list">
                         {topAnime.map((shows) => (
