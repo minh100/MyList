@@ -19,7 +19,7 @@ export const Home = () => {
         let cancel;
 
         cancel && cancel();
-        axios.get(`${baseUrl}/anime?sort=-userCount`,   // gets all time popular
+        axios.get(`${baseUrl}/anime?sort=-userCount&page[limit]=12`,   // gets all time popular
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
@@ -30,6 +30,7 @@ export const Home = () => {
                 setTopAnime(res.data.data);
             })
 
+            
         axios.get(`${baseUrl}/anime?filter[status]=current&sort=-userCount&page[limit]=12`,    // gets trending now
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
@@ -41,7 +42,7 @@ export const Home = () => {
                 setSeasonPopular(res.data.data);
             })
 
-        axios.get(`${baseUrl}/anime?filter[status]=upcoming&sort=popularityRank&page[limit]=12`,    // gets upcoming
+        axios.get(`${baseUrl}/anime?filter[status]=upcoming,unreleased&sort=-userCount&page[limit]=12`,    // gets upcoming
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c

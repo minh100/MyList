@@ -21,23 +21,25 @@ function App() {
           <Route path="/upcoming" component={() =>
             <Viewmore
               title="Upcoming"
-              url="https://kitsu.io/api/edge/anime?filter[status]=upcoming&#38;sort=popularityRank&#38;page[limit]=20"
-              />
+              url="https://kitsu.io/api/edge/anime?filter[status]=upcoming,unreleased&#38;sort=-userCount&#38;page[limit]=20"   // upcoming
+
+            />
           } />
 
           <Route path="/trending now" component={() =>
             <Viewmore
               title="Trending Now"
-              url="https://kitsu.io/api/edge/anime?filter[status]=current&#38;sort=popularityRank&#38;page[limit]=20"
-               />
-              
+              url="https://kitsu.io/api/edge/anime?filter[status]=current&#38;sort=popularityRank&#38;page[limit]=20"           // trending
+
+            />
+
           } />
 
           <Route path="/all time top" component={() =>
             <Viewmore
-              title="All Time Top" 
-              url="https://kitsu.io/api/edge/anime?sort=popularityRank&#38;page[limit]=20"
-              />
+              title="All Time Top"
+              url="https://kitsu.io/api/edge/anime?sort=popularityRank&#38;page[limit]=20"                                      // all time top
+            />
           } />
 
         </Switch>

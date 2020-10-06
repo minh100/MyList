@@ -56,6 +56,10 @@ img {
     text-align: left;
 }
 
+.card-bottom {
+    width: 180px;
+}
+
 @media screen and (max-width: 1040px) {
     .result-card {
         width: 160px;

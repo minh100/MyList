@@ -59,7 +59,7 @@ export const Viewmore = ({ title, url }) => {
 
             </div>
             <div className="viewmore-footer">
-                <h3 className="title">Page: {(page / 20) + 1}</h3>
+                <h3 className="title">Page: {Math.floor((page / 20) + 1)}</h3>
                 <div className="pagination">
                     {
                         page !== 0 ? (
