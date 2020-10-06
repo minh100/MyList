@@ -19,7 +19,7 @@ export const Home = () => {
         let cancel;
 
         cancel && cancel();
-        axios.get(`${baseUrl}/anime?sort=popularityRank&page[limit]=12`,   // gets all time popular
+        axios.get(`${baseUrl}/anime?sort=-userCount`,   // gets all time popular
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
@@ -30,7 +30,7 @@ export const Home = () => {
                 setTopAnime(res.data.data);
             })
 
-        axios.get(`${baseUrl}/anime?filter[status]=current&sort=popularityRank&page[limit]=12`,    // gets trending now
+        axios.get(`${baseUrl}/anime?filter[status]=current&sort=-userCount&page[limit]=12`,    // gets trending now
             {
                 cancelToken: new axios.CancelToken(function executor(c) {
                     cancel = c
@@ -99,22 +99,7 @@ export const Home = () => {
                     ) : ""
                 }
             </div>
-            <div className="upcoming">
-                <div className="header">
-                    <h3 className="title">Upcoming</h3>
-                    <div className="viewmore">
-                        <Link to="/upcoming">View More</Link>
-                    </div>
-                </div>
-                {
-                    <section className="result-card-list">
-                        {upcoming.map((shows) => (
-                            <ResultCard key={shows.id} anime={shows} />
-                        ))}
-                    </section>
 
-                }
-            </div>
             <div className="trending">
                 <div className="header">
                     <h3 className="title">Trending Now</h3>
@@ -125,6 +110,22 @@ export const Home = () => {
                 {
                     <section className="result-card-list">
                         {seasonPopular.map((shows) => (
+                            <ResultCard key={shows.id} anime={shows} />
+                        ))}
+                    </section>
+
+                }
+            </div>
+            <div className="upcoming">
+                <div className="header">
+                    <h3 className="title">Upcoming</h3>
+                    <div className="viewmore">
+                        <Link to="/upcoming">View More</Link>
+                    </div>
+                </div>
+                {
+                    <section className="result-card-list">
+                        {upcoming.map((shows) => (
                             <ResultCard key={shows.id} anime={shows} />
                         ))}
                     </section>

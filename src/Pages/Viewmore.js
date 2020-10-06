@@ -22,6 +22,8 @@ export const Viewmore = ({ title, url }) => {
                 // console.log(res.data.data)
                 setResults(res.data.data);
             })
+
+        window.scrollTo(0,0); // scrolls the window to top of page after every render
     }, [page, url])
 
     return (

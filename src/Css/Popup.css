@@ -108,14 +108,22 @@
 }
 
 .popup-stats {
-    margin: 15px 0 0 11px;
-    justify-content: space-evenly;
-    min-height: 90px;    
+    margin: 15px 0 30px 15px;
+    display: grid;
+    grid-template-rows: repeat(4, 23px);
+    grid-gap: 2px;
+    min-height: 100px;    
+    text-align: left;
+}
+
+#popup-rating, #popup-episodes, #popup-subtype {
+    height: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 #link-to-MAL:link ,#link-to-MAL:visited {
     padding: 0;
-    margin-left: 3px;
     color: #C3A995;
     
 }
@@ -128,6 +136,11 @@
     font-size: 0.8rem;
     padding: 2px;
     
+}
+
+.popup-close-button:hover {
+    background-color: rgb(196, 114, 114);
+    transition: background-color .2s ease-in-out;
 }
 
 .popup-close-button-container {
@@ -164,6 +177,7 @@
 
 .popup-control-button {
     margin-top: 6px;
+    margin-left: 2px;
     background-color: #74A6CF;
     width: 100%;
     text-align: center;
@@ -257,6 +271,7 @@
 
     .popup-description-section {
         margin-left: 1rem;
+        
     }
 
     .popup-content .popup-header .popup-header-section {
@@ -276,14 +291,49 @@
         
     }
 
+    .popup-stats-container {
+        width: 90%;
+        text-align: center;
+        justify-items: center;
+        height: 50px;
+        margin: 15px 3px 30px ;
+        position: absolute;
+        top: 300px;
+    }
+
     .popup-stats {
-        display: grid;
-        grid-template-columns: 60px 60px 60px;
-        grid-gap: 50px;
-        margin: 1rem 0 0 6.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
         font-size: 1.2rem;
-        line-height: 1rem;
+        text-align: center;
+    }
+    
+    #popup-rating, #popup-episodes, #popup-subtype{
+        width: 60px;
+        padding: 0 20px 0 10px;
+        text-align: center;
+    }
+
+    #link-to-MAL:link{
+        padding-left: 0;
+        width: 60px;
+        margin :0;
+        text-align: center;
     }
 
 
+}
+
+@media screen and (max-width: 760px) and (min-width: 600px) {
+    .popup-stats-container {
+        width: 90%;
+        text-align: center;
+        justify-items: center;
+        height: 50px;
+        margin: 15px 3px 30px 110px;
+        position: absolute;
+        top: 300px;
+    }
 }

@@ -118,11 +118,15 @@ export const ResultCard = ({ anime }) => {
                                                         </div>
                                                     }
                                                 </div>
-                                                <div className="popup-stats">
-                                                    <h5>Rating: {anime.attributes.averageRating}</h5>
-                                                    <h5>Episodes: {anime.attributes.episodeCount}</h5>
-                                                    <a id="link-to-MAL" href={`https://www.youtube.com/watch?v=${anime.attributes.youtubeVideoId}`} target="_blank" rel="noopener noreferrer">Trailer</a>
+                                                <div className="popup-stats-container">
+                                                    <div className="popup-stats">
+                                                        <h5 id="popup-rating">Type: {anime.attributes.subtype}</h5>
+                                                        <h5 id="popup-rating">Rating: {anime.attributes.averageRating}</h5>
+                                                        <h5 id="popup-episodes">Episodes: {anime.attributes.episodeCount}</h5>
+                                                        <a id="link-to-MAL" href={`https://www.youtube.com/watch?v=${anime.attributes.youtubeVideoId}`} target="_blank" rel="noopener noreferrer">Trailer</a>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div className="popup-description-section">
