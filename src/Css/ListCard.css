@@ -50,8 +50,8 @@ img {
 }
 
 .card-title:hover {
-    color: plum;
-    transition: color .2s ease;
+    color: gold;
+    transition: color .2s ease-in-out;
 }
 
 @media screen and (max-width: 1040px) {
