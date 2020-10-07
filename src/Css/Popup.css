@@ -172,6 +172,7 @@
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(49,54,68,.05), 0 5px 20px rgba(49,54,68,.08);
     z-index: 10;
+    pointer-events: none;
     
 }
 
@@ -199,10 +200,12 @@
 
 .popup-control-container:hover .popup-control-dropdown-content {
     display: block;
+    pointer-events: all;
 }
 
 .popup-control-dropdown-content:hover {
     display: block;
+    pointer-events: all;
 }
 
 .popup-item, .popup-item-active {
@@ -244,7 +247,7 @@
 
     .popup-control-dropdown-content {
         left: 220px;
-        top: 175px;
+        top: 169px;
         max-width: 140px;
         min-width: 140px;
 

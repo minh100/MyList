@@ -32,18 +32,21 @@
     left: 20px;
     border-radius: 5px;
     margin: 0;
-    opacity: 0;
+    display: none;
     padding-left: 3;
+    pointer-events: none;
     
 }
 
 .list-info:hover .dropdown-content {
-    opacity: 1;
-    transition: opacity .2s ease-in-out;
+    display: block;
+    transition: display .2s ease-in-out;
+    pointer-events: all;
 }
 
 .dropdown-content:hover {
     display: block;
+    pointer-events: all;
 }
 
 .items {
