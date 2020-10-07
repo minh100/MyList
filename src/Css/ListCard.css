@@ -61,7 +61,11 @@ img {
 
 @media screen and (max-width: 1040px) {
     .list-card {
-        width: 160px;
+        width: 125px;
+    }
+
+    .card-title {
+        width: 135px;
     }
 
     .card-cover {

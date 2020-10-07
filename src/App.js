@@ -6,6 +6,7 @@ import { Home } from './Home.js';
 import { GlobalProvider } from './Global/GlobalState.js';
 import { MyList } from './Component/MyList.js';
 import { Viewmore } from './Pages/Viewmore.js';
+import { Footer } from './Component/Footer.js';
 
 function App() {
   return (
@@ -32,7 +33,6 @@ function App() {
               url="https://kitsu.io/api/edge/anime?filter[status]=current&#38;sort=popularityRank&#38;page[limit]=20"           // trending
 
             />
-
           } />
 
           <Route path="/all time top" component={() =>
@@ -44,6 +44,7 @@ function App() {
 
         </Switch>
 
+        <Footer />
       </GlobalProvider>
     </Router>
   );

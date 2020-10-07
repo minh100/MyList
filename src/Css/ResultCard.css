@@ -62,7 +62,11 @@ img {
 
 @media screen and (max-width: 1040px) {
     .result-card {
-        width: 160px;
+        width: 125px;
+    }
+
+    .card-title {
+        width: 135px;
     }
 
     .card-cover {
