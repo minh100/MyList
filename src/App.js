@@ -17,9 +17,9 @@ function App() {
         <Switch>
           <Route exact path="/MyList" component={Home} />
 
-          <Route path="/list" component={MyList} />
+          <Route path="/MyList/list" component={MyList} />
 
-          <Route path="/upcoming" component={() =>
+          <Route path="/MyList/upcoming" component={() =>
             <Viewmore
               title="Upcoming"
               url="https://kitsu.io/api/edge/anime?filter[status]=upcoming,unreleased&#38;sort=-userCount&#38;page[limit]=20"   // upcoming
@@ -27,7 +27,7 @@ function App() {
             />
           } />
 
-          <Route path="/trending now" component={() =>
+          <Route path="/MyList/trending now" component={() =>
             <Viewmore
               title="Trending Now"
               url="https://kitsu.io/api/edge/anime?filter[status]=current&#38;sort=popularityRank&#38;page[limit]=20"           // trending
@@ -35,7 +35,7 @@ function App() {
             />
           } />
 
-          <Route path="/all time top" component={() =>
+          <Route path="/MyList/all time top" component={() =>
             <Viewmore
               title="All Time Top"
               url="https://kitsu.io/api/edge/anime?sort=popularityRank&#38;page[limit]=20"                                      // all time top
