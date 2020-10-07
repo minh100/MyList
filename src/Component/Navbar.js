@@ -8,12 +8,12 @@ export const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-section">
-                <Link className="logo" to="/">
+                <Link className="logo" to="/MyList">
                     <img src={Logo} alt="Logo"></img>
                 </Link>
                 <div className="links">
-                    <Link className="link" to="/">Search</Link>
-                    <Link className="link" to="/mylist">MyList</Link>
+                    <Link className="link" to="/MyList">Search</Link>
+                    <Link className="link" to="/list">MyList</Link>
                 </div>
             </div>
         </div>

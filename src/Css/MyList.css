@@ -1,5 +1,6 @@
 .mylist-section {
     margin-top: 100px;
+    min-height: 100vh;
 }
 
 .list-header {
@@ -97,6 +98,7 @@
     grid-template-columns: repeat(auto-fill, 185px);
     justify-content: space-between;
     margin: 2rem;
+    height: 100%;
 }
 
 .filler {

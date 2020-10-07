@@ -15,9 +15,9 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/MyList" component={Home} />
 
-          <Route path="/mylist" component={MyList} />
+          <Route path="/list" component={MyList} />
 
           <Route path="/upcoming" component={() =>
             <Viewmore
