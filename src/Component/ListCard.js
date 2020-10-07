@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
+import '../Css/ListCard.css';
 import '../Css/Popup.css';
 import '../Css/Controls.css';
-import '../Css/ListCard.css';
 import { GlobalContext } from '../Global/GlobalState.js';
 
 export const ListCard = ({ anime }) => {

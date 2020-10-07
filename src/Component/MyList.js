@@ -15,8 +15,8 @@ export const MyList = () => {
                     <>
                         <div className="list-header">
                             <div className="list-info">
-                                <div className="title">
-                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
+                                <div className="list-title">
+                                    <h3 style={{ borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>
@@ -58,8 +58,8 @@ export const MyList = () => {
                     <>
                         <div className="list-header">
                             <div className="list-info">
-                                <div className="title">
-                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
+                                <div className="list-title">
+                                    <h3 style={{ borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>
@@ -100,8 +100,8 @@ export const MyList = () => {
                     <>
                         <div className="list-header">
                             <div className="list-info">
-                                <div className="title">
-                                    <h3 style={{borderBottomStyle: "solid" }}>{listing}</h3>
+                                <div className="list-title">
+                                    <h3 style={{ borderBottomStyle: "solid" }}>{listing}</h3>
                                 </div>
                                 <div className="dropdown">
                                     <i className="fas fa-angle-right fa-lg"></i>

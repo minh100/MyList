@@ -4,7 +4,7 @@
     bottom: 10px;
     padding: 5px;
     z-index: 100;
-    background-color: black;
+    background-color: var(--card-control-color);
     border-radius: 50%;
     align-items: left;
     font-size: 14px;
@@ -16,10 +16,9 @@
     right: 0;
     bottom: 36px;
     margin-bottom: -10px;
-    transition: margin-bottom .2s ease-in-out;
     z-index: 100;
     display: none;
-    background-color: black;
+    background-color: var(--card-control-color);
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(49,54,68,.05), 0 5px 20px rgba(49,54,68,.08);
     
@@ -30,6 +29,7 @@
     width: 14px;
     height: 16.7px;
     text-align: center;
+    color: var(--secondary-color);
 }
 
 .control-container:hover {
@@ -60,7 +60,7 @@
 }
 
 .item-active {
-    background-color: lightgreen;
+    background-color: #81E3B5;
 }
 
 .item:hover {

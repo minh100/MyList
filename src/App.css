@@ -1,6 +1,15 @@
+:root {
+    --background-color: #21262B;
+    --primary-color: #DDE1E6;
+    --secondary-color: #FA5F69;
+    --text-hover-color: #FE8589;
+    --card-control-color: #EBEBEB;
+}
+
 * body {
     padding: 0;
-    margin: 0 ;
-    color: #C3A995;
+    margin: 0 3px 0 3px ;
+    color: var(--primary-color);
     font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
 }

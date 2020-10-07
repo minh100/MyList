@@ -38,7 +38,7 @@
 }
 
 .previous:hover, .next:hover {
-    color: rgb(240, 227, 203);
+    color: var(--text-hover-color);
     transition: color .2s ease-in-out;
 }
 
@@ -82,7 +82,7 @@
     }
 
     .header {
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 }
 

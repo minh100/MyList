@@ -3,10 +3,15 @@
     grid-template-rows: min-content auto;
     position: relative;
     width: 200px;
+    transition: transform .1s ease-in-out;
+}
+
+.list-card:hover {
+    color: var(--secondary-color);
+    transition: color .2s ease-in-out;
 }
 
 .card-cover {
-    
     cursor: pointer;
     display: inline-block;
     height: 265px;
@@ -50,9 +55,8 @@ img {
     text-align: left;
 }
 
-.card-title:hover {
-    color: gold;
-    transition: color .2s ease-in-out;
+.card-bottom {
+    width: 180px;
 }
 
 @media screen and (max-width: 1040px) {
@@ -72,12 +76,15 @@ img {
         width: 0;
         padding-bottom: 142.85714%;
     }
+    .card-title{
+        font-size: .8rem;
+    }
 
 }
 
 @media screen and (max-width: 760px) {
     .card-title {
-        font-size: 1rem;
+        font-size: .8rem;
         
     }
 }

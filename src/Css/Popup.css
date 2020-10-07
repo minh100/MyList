@@ -29,7 +29,7 @@
     bottom: 25%;
     margin: auto;
     border-radius: 16px;
-    background: wheat;
+    background-color: var(--background-color);
     display: block;
     box-sizing: border-box;
     min-width: 80%;
@@ -124,14 +124,14 @@
 
 #link-to-MAL:link ,#link-to-MAL:visited {
     padding: 0;
-    color: #C3A995;
+    color: var(--secondary-color);
     
 }
 
 .popup-close-button {
     width: 100%;
     text-align: center;
-    background-color: indianred;
+    background-color: var(--secondary-color);
     border-radius: 7px;
     font-size: 0.8rem;
     padding: 2px;
@@ -139,14 +139,14 @@
 }
 
 .popup-close-button:hover {
-    background-color: rgb(196, 114, 114);
+    background-color: var(--text-hover-color);
     transition: background-color .2s ease-in-out;
 }
 
 .popup-close-button-container {
     width: 50px;
     margin: 0;
-    color: white;
+    color: var(--primary-color);
     position: absolute;
     left: 88%;
     top: 30px;
@@ -158,10 +158,10 @@
 
 .popup-control-dropdown-content {
     display: none;
-    background-color: wheat;
-    color: #C3A995;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     position: absolute;
-    top: 225px;
+    top: 192px;
     left: 10px;
     height: 105px;
     margin: 0;
@@ -179,7 +179,7 @@
 .popup-control-button {
     margin-top: 6px;
     margin-left: 2px;
-    background-color: #74A6CF;
+    background-color: var(--primary-color);
     width: 100%;
     text-align: center;
     border-radius: 7px;
@@ -188,7 +188,7 @@
 .popup-control-container {
     font-size: 1.2em;
     width: 150px;
-    color: white;
+    color: var(--secondary-color);
     margin-left: 10px;
     
     
@@ -223,7 +223,7 @@
 }
 
 .popup-item-active {
-    background-color: lightgreen;
+    background-color: #81E3B5;
 }
 
 .popup-item:hover {
@@ -246,8 +246,8 @@
     }
 
     .popup-control-dropdown-content {
-        left: 220px;
-        top: 169px;
+        left: 222px;
+        top: 144px;
         max-width: 140px;
         min-width: 140px;
 

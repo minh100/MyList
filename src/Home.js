@@ -100,6 +100,22 @@ export const Home = () => {
                     ) : ""
                 }
             </div>
+            <div className="upcoming">
+                <div className="header">
+                    <h3 className="title">Upcoming</h3>
+                    <div className="viewmore">
+                        <Link to="/upcoming">View More</Link>
+                    </div>
+                </div>
+                {
+                    <section className="result-card-list">
+                        {upcoming.map((shows) => (
+                            <ResultCard key={shows.id} anime={shows} />
+                        ))}
+                    </section>
+
+                }
+            </div>
 
             <div className="trending">
                 <div className="header">
@@ -117,22 +133,7 @@ export const Home = () => {
 
                 }
             </div>
-            <div className="upcoming">
-                <div className="header">
-                    <h3 className="title">Upcoming</h3>
-                    <div className="viewmore">
-                        <Link to="/upcoming">View More</Link>
-                    </div>
-                </div>
-                {
-                    <section className="result-card-list">
-                        {upcoming.map((shows) => (
-                            <ResultCard key={shows.id} anime={shows} />
-                        ))}
-                    </section>
-
-                }
-            </div>
+            
             <div className="top">
                 <div className="header">
                     <h3 className="title">All Time Top</h3>

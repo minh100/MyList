@@ -8,7 +8,7 @@
 
 .result-card:hover {
     transform: scale(1.1);
-    color: gold;
+    color: var(--secondary-color);
     transition: color .2s ease-in-out;
 }
 

@@ -1,34 +1,29 @@
-body {
-    background-color: #292F36;
-    
-}
-
-
 .header {
     text-align: left;
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 2rem 2rem 1rem 2rem;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
 
 .viewmore {
+    padding-top: .33rem;
     padding-right: 1rem;
 }
 
 .viewmore a{
     text-decoration: none;
-    color: #C3A995;
+    color: var(--secondary-color);
 }
 
 .viewmore a:hover {
-    color: #c4bcb6;
+    color: var(--text-hover-color);
     transition: color .2s ease-in-out;
 }
 
 .search-section {
     margin-top: 100px;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .search-bar {
@@ -41,7 +36,7 @@ body {
     max-width: 230px;
     border-radius: 40px;
     padding-left: 1rem;
-    margin: 2rem;
+    margin: 2.2rem 2rem 2rem 2rem; 
     max-height: 20px;
     text-decoration: none;
     -webkit-appearance: none;
@@ -72,11 +67,16 @@ body {
     .result-card-list {
         grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
         grid-gap: 25px 20px;
-        margin: 1rem;
+        margin: 1rem 1rem 1rem 1.5rem;
     }
 
     .card-bottom {
         width: 145px;
+    }
+
+    .search-bar input{
+        min-width: 200px;
+        max-width: 200px;
     }
 }
 
@@ -98,7 +98,7 @@ body {
     }
 
     .header {
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 }
 
