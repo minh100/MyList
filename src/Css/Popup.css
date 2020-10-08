@@ -160,11 +160,6 @@
     display: none;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    /* position: absolute; */
-    /* top: 192px; */
-    /* left: 10px; */
-    /* max-width: 70%;
-    min-width: 70%; */
 
     position: relative;
     left: 2.5px;
@@ -247,6 +242,7 @@
     
 }
 
+
 @media screen and (max-width: 760px) { 
     .popup-close-button-container {
         left: 80%;
@@ -254,8 +250,9 @@
     }
 
     .popup-control-dropdown-content {
-        left: 222px;
-        top: 144px;
+        left: -3px;
+        /* left: 222px; */
+        /* top: 144px; */
         max-width: 140px;
         min-width: 140px;
 

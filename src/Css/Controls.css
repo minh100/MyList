@@ -13,7 +13,7 @@
 
 .control-dropdown-content {
     position: absolute;
-    right: 0;
+    right: -6px;
     bottom: 36px;
     margin-bottom: -10px;
     z-index: 100;
