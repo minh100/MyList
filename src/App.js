@@ -10,7 +10,7 @@ import { Footer } from './Component/Footer.js';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/MyList">
       <GlobalProvider>
         <Navbar />
 
