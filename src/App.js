@@ -10,7 +10,7 @@ import { Footer } from './Component/Footer.js';
 
 function App() {
   return (
-    <Router>
+    <Router basename="https://minh100.github.io/MyList/">
       <GlobalProvider>
         <Navbar />
 
