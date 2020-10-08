@@ -41,7 +41,7 @@ This will install the module to see the app's dependencies:
 
 > npm install -g npm-install-missing
 
-Run the module to see which dependicies are needed:
+Run the module to see which dependencies are needed:
 
 > npm-install-missing
 
