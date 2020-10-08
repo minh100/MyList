@@ -27,7 +27,7 @@ export const MyList = () => {
                                 </div>
                             </div>
                             <div className="count-box">
-                                Anime watching: <h5 className="count">{activeAnimeList.length}</h5>
+                                Watching: <h5 className="count">{activeAnimeList.length}</h5>
                             </div>
                         </div>
                         <section className="list-section">
@@ -70,7 +70,7 @@ export const MyList = () => {
                                 </div>
                             </div>
                             <div className="count-box">
-                                Anime Watched: <h5 className="count">{finishedAnimeList.length}</h5>
+                                Watched: <h5 className="count">{finishedAnimeList.length}</h5>
                             </div>
                         </div>
                         <section className="list-section">
@@ -112,7 +112,7 @@ export const MyList = () => {
                                 </div>
                             </div>
                             <div className="count-box">
-                                Planned Anime: <h5 className="count">{planningAnimeList.length}</h5>
+                                Planned: <h5 className="count">{planningAnimeList.length}</h5>
                             </div>
                         </div>
                         <section className="list-section">
