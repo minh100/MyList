@@ -81,7 +81,7 @@ export const Home = () => {
         <div>
             <div className="search-section">
                 <div className="search-bar">
-                    <h3 className="title">Search</h3>
+                    <h3 className="title">Searching for Anime</h3>
                     <input
                         type="text"
                         onChange={onChange}
