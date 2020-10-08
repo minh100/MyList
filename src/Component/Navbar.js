@@ -11,7 +11,7 @@ export const Navbar = () => {
                     <img src={Logo} alt="Logo"></img>
                 </Link>
                 <div className="links">
-                    <Link className="link" to="/">Search for Anime</Link>
+                    <Link className="link" to="/">Search</Link>
                     <Link className="link" to="/list/">MyList</Link>
                 </div>
             </div>
