@@ -24,6 +24,15 @@ Uses the public Kitsu API to get the informations.
   - At your *MyList* page it displays all your anime based on your lists
     - You can change lists by hovering over the current lists
 
+## Dev features
+
+- Uses React/ HTML / CSS
+- Uses [Kitsu API](https://kitsu.docs.apiary.io/#reference/anime/anime/fetch-collection?console=1).
+  - Another [link for JSON API](https://hummingbird-me.github.io/api-docs/#tag/Manga/paths/~1manga/post).
+- React axios for getting information from the API
+- React Context for state managment
+  - The Global folder
+
 ## Installation
 
 Clone this repo and run the following commands<br />
@@ -55,3 +64,7 @@ Use this [link](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pa
 Basically use the following command to deploy to GitHub Pages:
 > npm run deploy
 
+Having multiple pages may cause an issue where redirecting or refreshing the page would cause crashes.
+Use the following link as a reference in order to fix this problem; You only have to do the basic
+
+https://github.com/rafgraph/spa-github-pages
