@@ -19,7 +19,7 @@ function App() {
 
           <Route path="/list/" component={MyList} />
 
-          <Route path="/upcoming/" component={
+          <Route path="/upcoming/" component={ () =>
             <Viewmore
               title="Upcoming"
               url="https://kitsu.io/api/edge/anime?filter[status]=upcoming,unreleased&#38;sort=-userCount&#38;page[limit]=20"   // upcoming

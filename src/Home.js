@@ -104,7 +104,7 @@ export const Home = () => {
                 <div className="header">
                     <h3 className="title">Upcoming</h3>
                     <div className="viewmore">
-                        <Link to="/MyList/upcoming">View More</Link>
+                        <Link to="/upcoming">View More</Link>
                     </div>
                 </div>
                 {
@@ -121,7 +121,7 @@ export const Home = () => {
                 <div className="header">
                     <h3 className="title">Trending Now</h3>
                     <div className="viewmore">
-                        <Link to="/MyList/trending now">View More</Link>
+                        <Link to="/trending now">View More</Link>
                     </div>
                 </div>
                 {
@@ -138,7 +138,7 @@ export const Home = () => {
                 <div className="header">
                     <h3 className="title">All Time Top</h3>
                     <div className="viewmore">
-                        <Link to="/MyList/all time top">View More</Link>
+                        <Link to="/all time top">View More</Link>
                     </div>
                 </div>
                 {
