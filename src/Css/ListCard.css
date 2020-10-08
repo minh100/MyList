@@ -89,6 +89,33 @@ img {
 @media screen and (max-width: 760px) {
     .card-title {
         font-size: .8rem;
-        
+        width: 125px;
+    }
+    .card-cover {
+        width: 125px;
+    }
+    .card-bottom {
+        max-width: 125px;
+    }
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) 
+ {
+    .card-bottom {
+        max-width: 120px;
+    }
+    .card-title {
+        width: 110px;
+    }
+    .card-cover {
+        width: 120px;
+    }
+    .list-card {
+        width: 120px;
     }
 }

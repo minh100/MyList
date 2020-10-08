@@ -57,26 +57,64 @@
     position: relative;
     display: grid;
     grid-gap: 28px 15px;
-    grid-template-columns: repeat(auto-fill, 185px);
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     justify-content: space-between;
     margin: 2rem;
     
 }
 
-@media screen and (max-width: 760px) {
+@media only screen  /* Ipad */
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .result-card-list {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        grid-gap: 25px 35px;
+        margin: 1rem 1rem 1rem 1rem;
+    }
+}
+
+
+@media only screen /* iphone 4 5  */
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+ {
+    .result-card-list {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        grid-gap: 25px 35px;
+        margin: 1rem 1rem 1rem 2rem;
+    }
+    .search-bar input{
+        min-width: 30vw;
+        max-width: 30vw;
+    }
+}
+
+@media only screen /* iphone 6 7 8  */
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .result-card-list {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        grid-gap: 25px 20px;
+        margin: 1rem 1rem 1rem 1.5rem;
+    }
+    .search-bar input{
+        min-width: 30vw;
+        max-width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 760px) and (min-width: 680px){
     .result-card-list {
         grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
         grid-gap: 25px 20px;
         margin: 1rem 1rem 1rem 1.5rem;
     }
-
-    .card-bottom {
-        width: 145px;
-    }
-
     .search-bar input{
-        min-width: 200px;
-        max-width: 200px;
+        min-width: 20vw;
+        max-width: 20vw;
     }
 }
 
@@ -102,10 +140,10 @@
     }
 }
 
-@media screen and (max-width: 1540px) and (min-width: 1300px) {
+@media screen and (min-width: 1300px) {
     .result-card-list {
-        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-        grid-gap: 25px 20px;
+        grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+        grid-gap: 25px 50px;
     }
 
 }
