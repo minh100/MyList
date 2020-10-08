@@ -32,6 +32,7 @@ Uses the public Kitsu API to get the informations.
 - React axios for getting information from the API
 - React Context for state managment
   - The Global folder
+- Mobile and all devices responsiveness [Helpful link](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 
 ## Installation
 
