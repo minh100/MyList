@@ -27,7 +27,7 @@ function App() {
             />
           } />
 
-          <Route path="/trending now/" component={
+          <Route path="/trending-now/" component={
             <Viewmore
               title="Trending Now"
               url="https://kitsu.io/api/edge/anime?filter[status]=current&#38;sort=popularityRank&#38;page[limit]=20"           // trending
@@ -35,7 +35,7 @@ function App() {
             />
           } />
 
-          <Route path="/all time top/" component={
+          <Route path="/all-time-top/" component={
             <Viewmore
               title="All Time Top"
               url="https://kitsu.io/api/edge/anime?sort=popularityRank&#38;page[limit]=20"                                      // all time top
