@@ -36,16 +36,17 @@ Uses the public Kitsu API to get the informations.
 
 ## Installation
 
-Clone this repo and run the following commands<br />
+Clone this repo and run the following commands<br/>
 This will install the module to see the app's dependencies:
 
 > npm install -g npm-install-missing
 
-Run the module to see which dependencies are needed:
+Run the module to see which dependencies are needed:  **This might take a couple of minutes**
 
 > npm-install-missing
 
 The missing dependencies will automatically be updated/ installed or you can manually update/ install it
+
 
 ## Running app locally
 
