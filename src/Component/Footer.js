@@ -12,8 +12,8 @@ export const Footer = () => {
                 </div>
                 <img clasName="footer-logo"src={Logo} alt="logo"></img>
                 <div className="contact-section">
-                    <a rel="noopener noreferrer" target="_blank" href="https://github.com/minh100/MyList">Linkedin</a>
-                    <a rel="noopener noreferrer" target="_blank" href="https://github.com/minh100">Github</a>
+                    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/minh100/">Linkedin</a>
+                    <a rel="noopener noreferrer" target="_blank" href="https://github.com/minh100/MyList/">Github</a>
                 </div>
             </div>
         </div>
