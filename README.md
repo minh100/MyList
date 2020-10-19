@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 # View this website
 
@@ -39,11 +39,7 @@ Uses the public Kitsu API to get the informations.
 Clone this repo and run the following commands<br/>
 This will install the module to see the app's dependencies:
 
-> npm install -g npm-install-missing
-
-Run the module to see which dependencies are needed:  **This might take a couple of minutes**
-
-> npm-install-missing
+> npm install 
 
 The missing dependencies will automatically be updated/ installed or you can manually update/ install it
 
